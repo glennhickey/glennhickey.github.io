@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Arenaria Inc."
+title                    : "Glenn Hickey"
 title_separator          : "-"
 name                     : &name "Glenn Hickey, Ph.D."
 description              : &description "personal description"
@@ -22,9 +22,9 @@ repository               : "glennhickey/glennhickey.github.io"
 author:
   # Biographic information
   avatar           : "arenaria.png"
-  name             : "Glenn Hickey"
+  name             : #""
   pronouns         : # example: "she/her"  
-  bio              : "Genomics Research Consultant"
+  bio              : "Arenaria Software Consulting Inc."
   location         : "Canada"
   employer         : #"Red Brick University"
   uri              : # URL
