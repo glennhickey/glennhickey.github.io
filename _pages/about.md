@@ -6,45 +6,92 @@ redirect_from:
   - /about/
   - /about.html
 ---
+I am a freelance computer scientist specializing in tools for genomics research. Most of my work is centered on large, collaborative genomics projects such as the [Human Pangenome Reference Consortium](https://humanpangenome.org/) and [Vertebrate Genomes Project](https://vertebrategenomesproject.org/). 
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
->>>>>>> upstream/master
+# Current Projects
 
-This Site Is Under Construction
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+These are some projects that I am working on now. 
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+## Pangenome Reference Graphs
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+### Background
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+Understanding how and why genotype dictates phenotype is central to the field of genetics. Genotypes are represented as differences between each sample and a single reference genome. The value of this reference is that it provides a common coordinate system that can be used to aggregate data from any individual. But viewing all variation through the lens of a single reference can also lead to bias, for example in cases where all samples under study are much more diverged from the reference than they are to each other. The desire to mitigate reference bias has led to a recent push to use a representative panel of genomes, aka a pangenome, instead of a single reference genome. 
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+![Graph pangenome courtesy of HPRC website](/images/hprc-graph-from-website.png)
 
-**Markdown generator**
+### Structural Variants
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+I have been a principal developer and maintainer of the [vg](https://github.com/vgteam/vg/) toolkit since shortly after its inception. vg remains among the most widely-used software packages for working with pangenome graphs, and contains tools for graph construction, read mapping and genotyping. One vg tool I created is `vg call`, which can genotype structural variants in a pangenome graph using support from mapped reads. It remains popular due to its ease of use, accuracy and general applicability.
+ 
+![SV genotyping with vg](/images/vg-call.png)
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+Read more about SV genotyping with vg [here](https://doi.org/10.1186/s13059-020-1941-7).
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+### Graph Construction
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+Pangenomics has undergone a recent paradigm shift, from building graphs from panels of known variants to building graphs directly from genome assemblies. The latter approach further reduces reference bias and can offer better representation of complex sites, but is much more challenging computationally. The [Human Pangenome Reference Consortium](https://humanpangenome.org/) (HPRC) has as its mission the release of a public pangenome reference comprised of a representative collection of high quality, diploid human genome assemblies. As part of the HPRC I developed a pangenome graph construction pipeline called [Minigraph-Cactus](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/pangeome.md) (MC) which was used to create reference graphs for the first draft HPRC pangenome and has since become one of, if not the, state of the art pangenome graph construction methods. It is being used in most human pangenome projects, as well as a large number of pangenomes for other species.
+
+![Minigraph Cacatus](/images/mc.png)
+
+Read more about MC [here](https://doi.org/10.1038/s41587-023-01793-w) and how it was used in the HPRC [here](https://doi.org/10.1038/s41586-023-05896-x).
+
+### Representation of Complex Variants
+
+In theory, pangenome graphs provide an elegant representation of arbitrarily complex variation within a population. In practice, many pangenomics studies end up *project* their results back to a standard reference genome. They do this to leverage standard formats such as VCF and BAM, as well as the established ecosystem of genomics tools that use them. Projecting back to a single reference leads to many of the pitfalls of reference bias discussed above. To avoid projecting to a reference, I am working on better support for pangenome coordinate systems in general, and their application to common pangenome workflows such as read mapping and genotyping. I case of particular interest is variation nested inside of large SV insertions, which are often "invisible" due limitations of current tools and formats.
+
+![Nested SNP in SV insertion](/images/nested-snp.png)
+
+Read about an in-progress prototype for nested variation in vg and VCF [here](https://github.com/vgteam/vg/wiki/VCF-export-with-vg-deconstruct), a preprint showing results on HPRC v2 data will  be coming soon. 
+
+## Comparative Genomics
+
+### Background
+
+Comparative genomics seeks to use the relationship between species to better understand the relationships and functions of genomes. This is in contrast to pangenomics which primarily concerns variation *within* species, though genome alignment is a fundamental challenge for both fields. The larger evolutionary distances when aligning between species require different structures, formats and algorithms. Multiple sequence alignment and by extension multiple genome alignment are classical challenges of bioinformatics. They remain active fields as new computing technologies revolutionize the what's possible with the methods, while the amount of available genome sequences increases exponentially. 
+
+![MSA from https://www.nature.com/articles/s41586-023-06798-8/figures/4](/images/msa.png)
+
+### Progressive Cactus Genome Aligner
+
+I am the original and current lead developer of [Progressive Cactus](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md), which has remained the state of the art genome aligner for vertebrate and insect genomics studies for several years. Recent genome alignments I have produced with this software have underpinned studies of [apes](https://doi.org/10.1038/s41586-025-08816-3), [primates](https://doi.org/10.1038/s41586-023-06798-8) and [ants](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5055090). I am currently preparing the tool to build the first alignment for the [Vertebrate Genomes Project](https://vertebrategenomesproject.org/) (VGP).
+
+![Zoonomia Tree from https://www.science.org/doi/10.1126/science.abl8189](/images/tree-from-zoonomia.png)
+
+Read about Progressive Cactus [here](https://doi.org/10.1038/s41586-020-2871-y), and the special issue of Science devoted largely to the analysis of the Progressive Cactus Zoonomia alignment [here](https://www.science.org/toc/science/380/6643).
+
+### Hierarchical Alignment Format (HAL)
+
+Progressive Cactus alignments are made possible by a progressive data format: [HAL](https://github.com/ComparativeGenomicsToolkit/hal), which is a row-based file store for genome alignments. It allows for efficient combining and decomposing of huge genome alignments and the associated toolkit provides other basic functionality, including transposition into columnar formats such as MAF which can be used to conservation detection. 
+
+![HAL](/images/hal.png)
+
+Read about HAL [here](https://doi.org/10.1093/bioinformatics/btt128).
+
+### High Performance Computing
+
+The original version of Progressive Cactus was designed to run on the bespoke parasol-based cluster originally developed for the UCSC Genome Browser. Since then, in collaboration with the [Toil](https://toil.ucsc-cgl.org/) team and others, I have adapted Cactus to a variety of distributed environments such as [AWS EC2](https://aws.amazon.com/ec2/), Google Cloud (via [terra.bio](https://terra.bio/), [Kubernetes](https://kubernetes.io/) and, most recently [Slurm](https://slurm.schedmd.com/documentation.html). I am currently adapting some of the [WDL](https://github.com/openwdl/wdl)-based support used for Terra for application to Slurm. I have also worked ot integrate GPU acceleration in the pairwise alignment stage of Progressive Cactus.
+
+# Future Projects
+
+These are projects I would like to tackle in the next year (or so) but haven't quite had the resources to begin in earnest yet
+
+## Comparative Pangenomics
+
+Build out an interface between the progressive and pangenome sides of Cactus. The underlying formats allow pangenomes to be used in progressive alignments (early prototypes in this area look promising), but the tooling needs to be modified to better support it. I am particularly interested in applying this for detecting patterns of conservation and incomplete linear sorting (ILS).
+
+## HAL 2.0
+
+The HAL format (see above) is based on [HDF5[](https://www.hdfgroup.org/solutions/hdf5/), which is portable and reliable but is also extremely outdated in its lack of multithreading support.  I want to change the back end from HDF5 to something based on collections of indexed pairwise alignments.  This will be necessary to scale Cactus beyond about 1000 genomes, which will need to happen soon.
+
+## Improved Graph Genotyping
+
+`vg call` computes a genotype for every site (bubble) in the graph by determining the pair of paths through the site that are most likely given read support. The main drawback of this approach is that read support is determined from pileups on each base and edge in the graph -- all longer-range information is discarded.  Recent improvements to indexing graph-based mappings should allow the reads themselves (rather than the pileups) to be used for computing genotype likelihoods.
+
+## Taffy Tools
+
+The [TAF](https://github.com/ComparativeGenomicsToolkit/taffy) format is an efficient way to store and query alignment columns, and has an interface to efficiently stream windows of alignment data to be consumed by machine learning methods. The tooling to actually use this to detect patterns of conservation, acceleration, incomplete linear sorting, etc. still need to be written. 
+
+## Haplotype Tagging
+
+Given a mapped read to a pangenome graph, report which haplotypes in the graph best match the read. Provide summary statistics for a set of mapped reads, segmented over the genome. This is a popular feature request, as users want to use the pangenome to determine the ancestry of their own data.
