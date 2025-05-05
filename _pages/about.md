@@ -20,14 +20,6 @@ Understanding how and why genotype dictates phenotype is central to the field of
 
 ![Graph pangenome courtesy of HPRC website](/images/hprc-graph-from-website.png)
 
-### Structural Variants
-
-I have been a principal developer and maintainer of the [vg](https://github.com/vgteam/vg/) toolkit since shortly after its inception. vg remains among the most widely-used software packages for working with pangenome graphs, and contains tools for graph construction, read mapping and genotyping. One vg tool I created is `vg call`, which can genotype structural variants in a pangenome graph using support from mapped reads. It remains popular due to its ease of use, accuracy and general applicability.
- 
-![SV genotyping with vg](/images/vg-call.png)
-
-Read more about SV genotyping with vg [here](https://doi.org/10.1186/s13059-020-1941-7).
-
 ### Graph Construction
 
 Pangenomics has undergone a recent paradigm shift, from building graphs from panels of known variants to building graphs directly from genome assemblies. The latter approach further reduces reference bias and can offer better representation of complex sites, but is much more challenging computationally. The [Human Pangenome Reference Consortium](https://humanpangenome.org/) (HPRC) has as its mission the release of a public pangenome reference comprised of a representative collection of high quality, diploid human genome assemblies. As part of the HPRC I developed a pangenome graph construction pipeline called [Minigraph-Cactus](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/pangeome.md) (MC) which was used to create reference graphs for the first draft HPRC pangenome and has since become one of, if not the, state of the art pangenome graph construction methods. It is being used in most human pangenome projects, as well as a large number of pangenomes for other species.
@@ -35,6 +27,14 @@ Pangenomics has undergone a recent paradigm shift, from building graphs from pan
 ![Minigraph Cacatus](/images/mc.png)
 
 Read more about MC [here](https://doi.org/10.1038/s41587-023-01793-w) and how it was used in the HPRC [here](https://doi.org/10.1038/s41586-023-05896-x).
+
+### Structural Variants
+
+I have been a principal developer and maintainer of the [vg](https://github.com/vgteam/vg/) toolkit since shortly after its inception. vg remains among the most widely-used software packages for working with pangenome graphs, and contains tools for graph construction, read mapping and genotyping. One vg tool I created is `vg call`, which can genotype structural variants in a pangenome graph using support from mapped reads. It remains popular due to its ease of use, accuracy and general applicability.
+ 
+![SV genotyping with vg](/images/vg-call.png)
+
+Read more about SV genotyping with vg [here](https://doi.org/10.1186/s13059-020-1941-7).
 
 ### Representation of Complex Variants
 
