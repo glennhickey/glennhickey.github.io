@@ -66,7 +66,7 @@ Selected Talks
     
 Peer Review
 ======
-* Reviewer for Bionformatics, Genome Biology, Nature Genetics and others
+* Reviewer for Bioinformatics, Genome Biology, Genome Research, Molecular Biology and Evolution, Nature Genetics and others
 
 Hobbies
 ======
